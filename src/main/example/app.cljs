@@ -8,6 +8,7 @@
    [shadow.expo :as expo]
    [example.events]
    [example.subs]
+   ["react-navigation" :refer [createAppContainer]]
    ["react-navigation-stack" :as ReactNavigationStack]))
 
 (def styles
@@ -30,14 +31,14 @@
 (def routes {:Home {:screen (r/reactify-component app)}})
 
 (defonce nav-stack
-  (ReactNavigationStack/createStackNavigator
+  (createAppContainer (ReactNavigationStack/createStackNavigator
    (clj->js routes)
-   #js {:initialRouteName "Home"}))
+   #js {:initialRouteName "Home"})))
 
 (defn app-root []
   [:> nav-stack {}])
 
 (defn init []
   (rf/dispatch-sync [:initialize-db])
-  (rn/AppRegistry.registerComponent "main" app-root))
+  (rn/AppRegistry.registerComponent "main" #(identity nav-stack)))
 
