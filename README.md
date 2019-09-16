@@ -1,10 +1,12 @@
+# Forked project
+
+Here I try to use `react-navigation-stack` to create multiple screen app.
+
 # React Native using shadow-cljs in 3 minutes
 
 The fastest way a [ClojureScript](https://clojurescript.org/) coder can get started with React Native. *Prove me wrong.*
 
 This is an example project using: [shadow-cljs](https://github.com/thheller/shadow-cljs), [React Native](https://facebook.github.io/react-native/), [Expo](https://expo.io/), [Reagent](https://reagent-project.github.io/), and [re-frame](https://github.com/Day8/re-frame).
-
-<img src="./rn-rf-shadow.png" width="320" />
 
 Here follows instructions for getting started either using [Calva](http://github.com/BetterThanTomorrow/calva) or the command line or, and assuming you have stuff like XCode, or whatever is the Android equivalents, installed:
 
